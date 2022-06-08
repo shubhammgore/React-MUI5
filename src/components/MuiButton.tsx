@@ -1,4 +1,4 @@
-import { Stack, Button, IconButton } from '@mui/material';
+import { Stack, Button, IconButton, ButtonGroup } from '@mui/material';
 
 import SendIcon from '@mui/icons-material/Send';
 
@@ -60,6 +60,22 @@ const MuiButton = () => {
 				<IconButton aria-label='send' color='success' size='small'>
 					<SendIcon />
 				</IconButton>
+			</Stack>
+
+			{/* Button Group */}
+
+			<Stack direction='row'>
+				<ButtonGroup
+					variant='contained'
+					orientation='vertical'
+					size='small'
+					color='secondary'
+					aria-label='alignment button group'
+				>
+					<Button onClick={() => alert('Clicked Left')}>Left</Button>
+					<Button onClick={() => alert('Clicked Center')}>Center</Button>
+					<Button onClick={() => alert('Clicked Right')}>Right</Button>
+				</ButtonGroup>
 			</Stack>
 		</Stack>
 	);
